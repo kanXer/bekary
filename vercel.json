@@ -1,6 +1,4 @@
 {
-    "version": 2,
-    "rewrites": [{ "source": "/(.*)", "destination": "/" }],
     "builds": [
       {
         "src": "mysite/wsgi.py",
@@ -25,7 +23,7 @@
       },
       {
         "src": "/(.*)",
-        "dest": "/mysite/wsgi.py"
+        "dest": "mysite/wsgi.py"
       }
     ]
   }
