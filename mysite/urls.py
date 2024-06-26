@@ -25,5 +25,5 @@ urlpatterns = [
     path("about",include('myapp.urls') ),
     path("service",include('myapp.urls') ),
     path("contact",include('myapp.urls') ),
-    staticfiles(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    # staticfiles(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 ]
