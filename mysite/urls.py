@@ -14,8 +14,9 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from xml.etree.ElementInclude import include
-from django.contrib import admin
+from django.contrib import admin , staticfiles
 from django.urls import path, include
+import settings
 
 urlpatterns = [
     # static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
@@ -24,4 +25,5 @@ urlpatterns = [
     path("about",include('myapp.urls') ),
     path("service",include('myapp.urls') ),
     path("contact",include('myapp.urls') ),
+    staticfiles(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 ]
